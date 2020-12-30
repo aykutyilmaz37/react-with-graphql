@@ -35,6 +35,14 @@ app.use(
   })
 );
 
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, 'frontend/public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 mongoose
   .connect(
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}/${process.env.MONGO_DB}?retryWrites=true&w=majority`,
