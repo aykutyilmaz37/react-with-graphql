@@ -5,6 +5,7 @@ import AuthContext from "../context/auth-context";
 import OrderList from "../components/Orders/OrderList/OrderList";
 import OrdersChart from "../components/Orders/OrdersChart/OrdersChart";
 import OrdersControl from "../components/Orders/OrdersControl/OrdersControl";
+import { toast } from 'react-toastify';
 
 const Orders = () => {
   const [loading, setLoading] = useState(false);
@@ -59,6 +60,7 @@ const Orders = () => {
       .catch((err) => {
         console.log(err);
         setLoading(false);
+        toast.error(err.message)
       });
   };
 
@@ -102,6 +104,7 @@ const Orders = () => {
       .catch((err) => {
         console.log(err);
         setLoading(false);
+        toast.error(err.message)
       });
   };
 

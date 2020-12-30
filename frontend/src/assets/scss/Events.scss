@@ -24,21 +24,32 @@ $white: #fff;
     padding: 1rem;
     border-radius: 3px;
     border: 1px solid $primary-color;
-    display:flex;
-    justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    h1{
-      margin:0;
+    h1 {
+      margin: 0;
       font-size: 1.5rem;
-      color:$primary-color;
+      color: $primary-color;
     }
-    h2{
-      margin:0;
+    h2 {
+      margin: 0;
       font-size: 1rem;
-      color:$secondary-color;
+      color: $secondary-color;
     }
-    p{
-      margin:0;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .events {
+    &__list-item {
+      flex-wrap: wrap;
+      h2 {
+        margin-bottom: 15px;
+      }
     }
   }
 }

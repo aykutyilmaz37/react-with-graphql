@@ -52,9 +52,9 @@ $white: #fff;
           border-radius: 3px;
           text-decoration: none;
           color: $white;
-          background:none;
-          border:none;
-          outline:0;
+          background: none;
+          border: none;
+          outline: 0;
           cursor: pointer;
           transition: 0.2s all linear;
           &:hover {
@@ -66,6 +66,23 @@ $white: #fff;
             color: $primary-color;
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar {
+    flex-direction: column;
+    height: 4.5rem;
+    justify-content: center;
+    right: 0;
+    padding: 0;
+
+    &__logo {
+      h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
       }
     }
   }

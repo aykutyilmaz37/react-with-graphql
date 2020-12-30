@@ -76,3 +76,9 @@ body {
   text-align: center;
 }
 
+
+@media (max-width:375px){
+  .main-content{
+    margin:5rem 0;
+  }
+}

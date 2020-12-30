@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useContext } from "react";
 import {useHistory} from 'react-router-dom'
 import AuthContext from "../context/auth-context";
-
+import { toast } from 'react-toastify';
 import "../assets/scss/Auth.scss";
 
 const Auth = () => {
@@ -79,8 +79,9 @@ const Auth = () => {
         }
         
       })
-      .catch((err) => {
+      .catch((err)  => {
         console.log(err);
+        toast.error(err.message)
       });
   };
 

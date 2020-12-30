@@ -2,6 +2,8 @@ import React, { Fragment, useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./helpers/private-route";
 import "./App.scss";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import Navbar from "./components/Navigation/Navbar";
 import AuthContext from "./context/auth-context";
@@ -30,7 +32,8 @@ const App = () => {
           value={{ token: token, userId: userId, login: login, logout: logout }}
         >
           <Navbar />
-         
+          <ToastContainer/>
+
           <main className="main-content">
             <Switch>
               <PrivateRoute exact path="/" />

@@ -4,7 +4,7 @@ import AuthContext from "../context/auth-context";
 import Modal from "../components/Modal/Modal";
 import Spinner from "../components/Spinner/Spinner";
 import EventList from "../components/Events/EventList/EventList";
-
+import { toast } from 'react-toastify';
 const Events = () => {
   const [creating, setCreating] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -64,6 +64,7 @@ const Events = () => {
       .catch((err) => {
         console.log(err);
         setLoading(false);
+        toast.error(err.message)
       });
   };
 
@@ -132,6 +133,7 @@ const Events = () => {
       })
       .catch((err) => {
         console.log(err);
+        toast.error(err.message)
       });
   };
   const modalCancelHandler = () => {
@@ -187,6 +189,7 @@ const Events = () => {
       })
       .catch((err) => {
         console.log(err);
+        toast.error(err.message)
       });
   };
 

@@ -39,3 +39,9 @@ $white: #fff;
     left: calc((100% - 30rem) / 2);
   }
 }
+
+@media(max-width: 375px){
+  .modal {
+    top:10vh;
+  }
+}
