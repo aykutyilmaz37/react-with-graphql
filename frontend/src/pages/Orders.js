@@ -12,7 +12,7 @@ const Orders = () => {
   const [outputType, setOutputType] = useState("list");
   const context = useContext(AuthContext);
   const token = context.token;
-  const { REACT_APP_GRAPHQL } = '/graphql';
+  const  GRAPHQL_URL = '/graphql';
 
   useEffect(() => {
     fetchOrders();
@@ -37,7 +37,7 @@ const Orders = () => {
         `,
     };
 
-    fetch(`${REACT_APP_GRAPHQL}`, {
+    fetch(GRAPHQL_URL, {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {
@@ -78,7 +78,7 @@ const Orders = () => {
       },
     };
 
-    fetch(`${REACT_APP_GRAPHQL}`, {
+    fetch(GRAPHQL_URL, {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {

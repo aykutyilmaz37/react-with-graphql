@@ -17,7 +17,7 @@ const Events = () => {
   const [eventList, setEventList] = useState([]);
   const context = useContext(AuthContext);
   const token = context.token;
-  const { REACT_APP_GRAPHQL } = '/graphql';
+  const  GRAPHQL_URL = '/graphql';
 
   useEffect(() => {
     fetchEvents();
@@ -43,7 +43,7 @@ const Events = () => {
         `,
     };
 
-    fetch(`${REACT_APP_GRAPHQL}`, {
+    fetch(GRAPHQL_URL, {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {
@@ -113,7 +113,7 @@ const Events = () => {
       },
     };
 
-    fetch(`${REACT_APP_GRAPHQL}`, {
+    fetch(GRAPHQL_URL, {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {
@@ -166,7 +166,7 @@ const Events = () => {
       },
     };
 
-    fetch(`${REACT_APP_GRAPHQL}`, {
+    fetch(GRAPHQL_URL, {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {

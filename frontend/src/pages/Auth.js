@@ -10,7 +10,7 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const context = useContext(AuthContext);
-  const { REACT_APP_GRAPHQL } = '/graphql';
+  const  GRAPHQL_URL = '/graphql';
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ const Auth = () => {
       };
     }
 
-    fetch(`${REACT_APP_GRAPHQL}`, {
+    fetch(GRAPHQL_URL, {
       method: "POST",
       body: JSON.stringify(requestBody),
       headers: {
