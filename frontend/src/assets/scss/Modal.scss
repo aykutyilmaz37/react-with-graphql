@@ -1,0 +1,41 @@
+$primary-color: #7158e2;
+$secondary-color: #18dcff;
+$white: #fff;
+.modal {
+  width: 90%;
+  background: $white;
+  box-shadow: 0 2px 8px rgba($primary-color, 0.25);
+  position: fixed;
+  opacity: 0;;
+  top: 20vh;
+  left: 5%;
+  transition: .4s all linear;
+  &__header {
+    padding: 1rem;
+    background: $primary-color;
+    color: $white;
+    h1 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+  }
+
+  &__content {
+    padding: 1rem;
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+  &.active{
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 30rem;
+    left: calc((100% - 30rem) / 2);
+  }
+}

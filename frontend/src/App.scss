@@ -1,0 +1,78 @@
+$primary-color: #7158e2;
+$secondary-color: #18dcff;
+$white: #fff;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.main-content {
+  margin: 5rem 2.5rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  label,
+  input {
+    width: 100%;
+    display: block;
+  }
+  input {
+    border: 1px solid $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: 0.2s linear all;
+    box-sizing: border-box;
+    &:focus {
+      box-shadow: inset 1px 1px 5px rgba($primary-color, 0.25);
+      outline: 0;
+    }
+  }
+  textarea {
+    width: 100%;
+    border: 1px solid $primary-color;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: 0.2s linear all;
+    &:focus {
+      box-shadow: inset 1px 1px 5px rgba($primary-color, 0.25);
+      outline: 0;
+    }
+  }
+  label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.btn {
+  background: $primary-color;
+  font: inherit;
+  border: 1px solid $primary-color;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 1px 5px rgba($primary-color, 0.25);
+  color: $white;
+  transition: 0.2s linear all;
+  outline: 0;
+  cursor: pointer;
+  &:hover,
+  &:active {
+    background: $secondary-color;
+    border-color: $secondary-color;
+  }
+  &.mr-1 {
+    margin-right: 1rem;
+  }
+  &.active{
+    background: $secondary-color;
+    border-color: $secondary-color;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
