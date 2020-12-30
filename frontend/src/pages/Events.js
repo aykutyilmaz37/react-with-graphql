@@ -17,7 +17,7 @@ const Events = () => {
   const [eventList, setEventList] = useState([]);
   const context = useContext(AuthContext);
   const token = context.token;
-  const { REACT_APP_GRAPHQL } = process.env;
+  const { REACT_APP_GRAPHQL } = '/graphql';
 
   useEffect(() => {
     fetchEvents();

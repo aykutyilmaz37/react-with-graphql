@@ -12,7 +12,7 @@ const Orders = () => {
   const [outputType, setOutputType] = useState("list");
   const context = useContext(AuthContext);
   const token = context.token;
-  const { REACT_APP_GRAPHQL } = process.env;
+  const { REACT_APP_GRAPHQL } = '/graphql';
 
   useEffect(() => {
     fetchOrders();

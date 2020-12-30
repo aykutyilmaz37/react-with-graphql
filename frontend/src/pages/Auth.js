@@ -10,7 +10,7 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const context = useContext(AuthContext);
-  const { REACT_APP_GRAPHQL } = process.env;
+  const { REACT_APP_GRAPHQL } = '/graphql';
 
   const submitHandler = (e) => {
     e.preventDefault();
